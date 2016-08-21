@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C13AEF81D6A371F00DE1392 /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C13AEF71D6A371F00DE1392 /* Kanna.framework */; };
 		813DD1C81D6A327500A1AA57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DD1C71D6A327500A1AA57 /* AppDelegate.swift */; };
 		813DD1CA1D6A327500A1AA57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DD1C91D6A327500A1AA57 /* ViewController.swift */; };
 		813DD1CD1D6A327500A1AA57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 813DD1CB1D6A327500A1AA57 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C13AEF71D6A371F00DE1392 /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/iOS/Kanna.framework; sourceTree = "<group>"; };
 		813DD1C41D6A327500A1AA57 /* cbiFlagStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cbiFlagStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		813DD1C71D6A327500A1AA57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		813DD1C91D6A327500A1AA57 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C13AEF81D6A371F00DE1392 /* Kanna.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +80,7 @@
 		813DD1BB1D6A327500A1AA57 = {
 			isa = PBXGroup;
 			children = (
+				7C13AEF71D6A371F00DE1392 /* Kanna.framework */,
 				813DD1C61D6A327500A1AA57 /* cbiFlagStatus */,
 				813DD1DB1D6A327500A1AA57 /* cbiFlagStatusTests */,
 				813DD1E61D6A327500A1AA57 /* cbiFlagStatusUITests */,
@@ -135,6 +139,7 @@
 				813DD1C01D6A327500A1AA57 /* Sources */,
 				813DD1C11D6A327500A1AA57 /* Frameworks */,
 				813DD1C21D6A327500A1AA57 /* Resources */,
+				7C13AEF91D6A37BC00DE1392 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -250,6 +255,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7C13AEF91D6A37BC00DE1392 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Kanna.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		813DD1C01D6A327500A1AA57 /* Sources */ = {
@@ -397,6 +419,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = cbiFlagStatus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lfryer.cbiFlagStatus;
@@ -408,6 +434,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = cbiFlagStatus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lfryer.cbiFlagStatus;
@@ -482,6 +512,7 @@
 				813DD1EE1D6A327500A1AA57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		813DD1EF1D6A327500A1AA57 /* Build configuration list for PBXNativeTarget "cbiFlagStatusTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +521,7 @@
 				813DD1F11D6A327500A1AA57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		813DD1F21D6A327500A1AA57 /* Build configuration list for PBXNativeTarget "cbiFlagStatusUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +530,7 @@
 				813DD1F41D6A327500A1AA57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
