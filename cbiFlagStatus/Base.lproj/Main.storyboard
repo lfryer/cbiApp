@@ -25,10 +25,13 @@
                                 <rect key="frame" x="20" y="363" width="560" height="217"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Burgee: Program is closed for the Adult Program. Our hours of operations are listed here.
+
 Green: Light to Moderate Winds. No Restrictions.
+
 Yellow: Moderate Winds. Restrictions on beginner sailors; on-the-water testing may be available.
+
 Red: Moderate to Strong Winds. Restrictions may be in use, and advanced testing may be available.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
